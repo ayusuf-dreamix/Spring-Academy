@@ -1,0 +1,5 @@
+Go to the project directory with the command
+cd [project name]
+
+Then build it with the following command
+./gradlew build
