@@ -1,4 +1,4 @@
-package example.repositoriesandspringdata;
+package example.implementingpost;
 
 import org.springframework.data.annotation.Id;
 
