@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.accessingdatajpa.CustomerRepositoryTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-07-18T12:12:58" hostname="DESKTOP-KGD22DS" time="0.524">
+  <properties/>
+  <testcase name="testFindByLastName()" classname="com.example.accessingdatajpa.CustomerRepositoryTests" time="0.524"/>
+  <system-out><![CDATA[15:12:56.120 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.accessingdatajpa.CustomerRepositoryTests]: CustomerRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:12:56.196 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.accessingdatajpa.AccessingDataJpaApplication for test class com.example.accessingdatajpa.CustomerRepositoryTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2023-07-18T15:12:56.492+03:00  INFO 21168 --- [    Test worker] c.e.a.CustomerRepositoryTests            : Starting CustomerRepositoryTests using Java 20.0.1 with PID 21168 (started by ahmed.yusuf in C:\Users\ahmed.yusuf\Java Learnings\Spring Academy\Spring-Academy\Accessing Data with JPA)
+2023-07-18T15:12:56.493+03:00  INFO 21168 --- [    Test worker] c.e.a.CustomerRepositoryTests            : No active profile set, falling back to 1 default profile: "default"
+2023-07-18T15:12:56.726+03:00  INFO 21168 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-18T15:12:56.762+03:00  INFO 21168 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2023-07-18T15:12:56.801+03:00  INFO 21168 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-07-18T15:12:56.959+03:00  INFO 21168 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:fe59bf67-bd8b-45b1-bbae-8509dc547e55;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-07-18T15:12:57.172+03:00  INFO 21168 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-18T15:12:57.222+03:00  INFO 21168 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-07-18T15:12:57.224+03:00  INFO 21168 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-18T15:12:57.312+03:00  INFO 21168 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-18T15:12:57.400+03:00  INFO 21168 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-18T15:12:57.432+03:00  INFO 21168 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+2023-07-18T15:12:57.615+03:00  INFO 21168 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-18T15:12:58.074+03:00  INFO 21168 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: drop table if exists customer cascade 
+Hibernate: drop sequence if exists customer_seq
+Hibernate: create sequence customer_seq start with 1 increment by 50
+Hibernate: create table customer (id bigint not null, first_name varchar(255), last_name varchar(255), primary key (id))
+2023-07-18T15:12:58.101+03:00  INFO 21168 --- [    Test worker] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2023-07-18T15:12:58.102+03:00  INFO 21168 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-18T15:12:58.384+03:00  INFO 21168 --- [    Test worker] c.e.a.CustomerRepositoryTests            : Started CustomerRepositoryTests in 2.125 seconds (process running for 2.997)
+Hibernate: select next value for customer_seq
+Hibernate: insert into customer (first_name,last_name,id) values (?,?,?)
+Hibernate: select next value for customer_seq
+Hibernate: insert into customer (first_name,last_name,id) values (?,?,?)
+Hibernate: insert into customer (first_name,last_name,id) values (?,?,?)
+Hibernate: insert into customer (first_name,last_name,id) values (?,?,?)
+Hibernate: insert into customer (first_name,last_name,id) values (?,?,?)
+2023-07-18T15:12:58.463+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customers found with findAll():
+2023-07-18T15:12:58.463+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : -------------------------------
+Hibernate: select c1_0.id,c1_0.first_name,c1_0.last_name from customer c1_0
+2023-07-18T15:12:58.554+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer[id=1, firstName='Jack', lastName='Bauer']
+2023-07-18T15:12:58.554+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer[id=2, firstName='Chloe', lastName='O'Brian']
+2023-07-18T15:12:58.555+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer[id=3, firstName='Kim', lastName='Bauer']
+2023-07-18T15:12:58.555+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer[id=4, firstName='David', lastName='Palmer']
+2023-07-18T15:12:58.555+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer[id=5, firstName='Michelle', lastName='Dessler']
+2023-07-18T15:12:58.555+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : 
+Hibernate: select c1_0.id,c1_0.first_name,c1_0.last_name from customer c1_0 where c1_0.id=?
+2023-07-18T15:12:58.567+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer found with findById(1L):
+2023-07-18T15:12:58.567+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : --------------------------------
+2023-07-18T15:12:58.567+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer[id=1, firstName='Jack', lastName='Bauer']
+2023-07-18T15:12:58.567+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : 
+2023-07-18T15:12:58.567+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer found with findByLastName('Bauer'):
+2023-07-18T15:12:58.567+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : --------------------------------------------
+Hibernate: select c1_0.id,c1_0.first_name,c1_0.last_name from customer c1_0 where c1_0.last_name=?
+2023-07-18T15:12:58.614+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer[id=1, firstName='Jack', lastName='Bauer']
+2023-07-18T15:12:58.614+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : Customer[id=3, firstName='Kim', lastName='Bauer']
+2023-07-18T15:12:58.614+03:00  INFO 21168 --- [    Test worker] c.e.a.AccessingDataJpaApplication        : 
+Hibernate: insert into customer (first_name,last_name,id) values (?,?,?)
+Hibernate: select c1_0.id,c1_0.first_name,c1_0.last_name from customer c1_0 where c1_0.last_name=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
